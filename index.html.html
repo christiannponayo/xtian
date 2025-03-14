@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthdayyy babyyyyy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fce4ec;
+            text-align: center;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .container {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 350px;
+            margin-bottom: 15px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .letter {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .letter.show {
+            display: block;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .close-btn {
+            background: #d81b60;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function showLetter(id) {
+            let letter = document.getElementById(id);
+            letter.style.display = "block";
+            setTimeout(() => letter.classList.add("show"), 10);
+        }
+        function closeLetter(id) {
+            let letter = document.getElementById(id);
+            letter.classList.remove("show");
+            setTimeout(() => letter.style.display = "none", 500);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/482995954_655717213637227_2896567646951585954_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEqWeNgpMhSgYp14uOPwR9F3N0eQrqkUcfc3R5CuqRRx9wn1wDEykIvIjwEcbUvhoxd7ihUnVsbezOjtKjmzmPN&_nc_ohc=TosYaUlABzIQ7kNvgE8mAXU&_nc_oc=Adhx-mUIDPQ9G7AtSiVhCHcO3XxZJY5gAAuohVS2TL_Zvr0cDcndEtQJIHOdGj2Afk4&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&oh=03_Q7cD1wHAANJW0JIGqwaQmnBCnP3ugs-26WfFGmXPKl9o5lcc-w&oe=67FBCD4C" alt="Image 1">
+        <button onclick="showLetter('letter1')">Read Letter</button>
+    </div>
+    <div class="container">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/476901002_9470379033017591_434938491306671049_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeE9_oJJo-4cMZxSpzZiGLfAOgNnsc_yRHg6A2exz_JEeBRvrh6nQisEpGsSS1gtpgkpZRZl6OIh3CPFC9Rf3cIR&_nc_ohc=BmPY5V8XgA4Q7kNvgGFBBDg&_nc_oc=AdgwPSJ0eawH8eWQDaywpBRGsvBoqaWoJdMWI1J5q2oVkSVGEu5H7NgVgSSoQuEds_g&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&oh=03_Q7cD1wEn3nMe7U9D2TjdCbQSrSUQ2BrUR8JVDzvhqcZ4PHxlzQ&oe=67FBA270" alt="Image 2">
+        <button onclick="showLetter('letter2')">Read Letter</button>
+    </div>
+    <div class="container">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/480422164_522951387493342_403067799363443079_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeG5Bnp9z6c4I1sxnCMty_tAB_3mm0_A-uYH_eabT8D65roO8lKNplBhoGzf_Ac5AmBKi5x8cOEqigdIO0UOuBeU&_nc_ohc=G06JQJTdPcgQ7kNvgE2c-TJ&_nc_oc=AdhYFl3r_w0l3nIUBhxRM6VcWAdKeIr0QO6ztrDsV_m5ccq_GV0a1t0EMgvOhWKOlig&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&oh=03_Q7cD1wHDoU9AaazzFL3-X5eXnLttz5CeF7qzTlPrzBKypJpZHQ&oe=67FBBA93" alt="Image 3">
+        <button onclick="showLetter('letter3')">Read Letter</button>
+    </div>
+    <div class="container">
+        <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t1.15752-9/483187874_1881792782633142_3580406704867090491_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGMIIyo7VmLovS55VRlMQ2wxRjL2C3Qw_LFGMvYLdDD8ufRedk6JdA_3K4D8bdMuOkMw9uQdGIiEeVxJK0cvejI&_nc_ohc=g7laaMmZBpwQ7kNvgEwVXNi&_nc_oc=AdgnN-nKxw_N2qcELssfmuVKDX4OV3Gk_3hX_zQmdXbuYWgYP-4Po6higQ9clc4yOxs&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&oh=03_Q7cD1wFXwaQIkzla1vhQef75FQkhhRE7ZedZp8lYOt5Nu5xl3w&oe=67FBB255" alt="Image 4">
+        <button onclick="showLetter('letter4')">Read Letter</button>
+    </div>
+    <div class="container">
+        <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t1.15752-9/477322733_596635266671250_3181441781770042130_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGE9XMR8l9Alnd7BtxxEjDWC3ispujPPS8LeKym6M89L87dczYBp26u0bmzmpQUb9xM__EYVsERaffb4CrINlw3&_nc_ohc=L798RQgjzXQQ7kNvgEaTcvG&_nc_oc=AdhMx354fGSTm8JElayfzmVP9kOl52E5zVn41OB_oNxzT64opW75CUF287mwlguYysY&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&oh=03_Q7cD1wFngpgqsqDTkpwELFK6LHxNquWZkPReqSPxtzCVR6XEvA&oe=67FBB7E3" alt="Image 5">
+        <button onclick="showLetter('letter5')">Read Letter</button>
+    </div>
+    
+    <div id="letter1" class="letter">
+        <p>Dear [bb], this is letter 1.Happy Birthday po baby maraming salamat sayo hindi ko alam kung anong words ng pasasalamat ang pwede kong magamit dahil hindi ito masukat sa salita, maraming salamat dahil never mo akong iniwan kahit wala pa akong nararating at napapatunayan,  marasaming salamat dahil lahat binigay mo walang mintis lahat binigay mo kahit 50k na awit sayo bading ka kasi e. Basta tandaan mo lang lagi na mahal na maahal kita ikaw at ikaw lang ang mamahalin ko hanggang dulo. proud na proud ako sayo lagi, tandaan mo kapag may umaway sayo ako muna ang una nilang makakaaway bago ka hindi ka nila pwedeng saktan or galawin. 
+            (wag lang gagamba at higad iyo nayun)</p>
+        <button class="close-btn" onclick="closeLetter('letter1')">X</button>
+    </div>
+    <div id="letter2" class="letter">
+        <p>Dear [bb], this is letter 2.
+            Sorry kung ang dami kong pag kukulang as your partner, sorry kung wala akong ma provide sayo kasi wala naman akong work e, sorry rin kung minsan nag aaway tayo basta alam mona yun hehehehehe basta sorry sa lahat ng pag kakamali kon (IKAW KASI E)</p>
+        <button class="close-btn" onclick="closeLetter('letter2')">X</button>
+    </div>
+    <div id="letter3" class="letter">
+        <p>Dear [bb], this is letter 3.
+            Salamat po sa walang sawang support sakin, tandaan mo ang pogi mo basta ikaw lang wala na na akong masabi hindi naman ako sanay sa ganto e hehehe</p>
+        <button class="close-btn" onclick="closeLetter('letter3')">X</button>
+    </div>
+    <div id="letter4" class="letter">
+        <p>Dear [bb], this is letter 4. I am grateful for your love ay oo nga pala ang asim mo HAHAHAHAHAHAHAHAHAHAH eme lang ang baho ng utot mo rekta kabag ako kaya lagi kitang inaaway at okay lang kahit minsan may sabit hrabe ka kasi kumain amputa AHHHAHAHAHA</p>
+        <button class="close-btn" onclick="closeLetter('letter4')">X</button>
+    </div>
+    <div id="letter5" class="letter">
+        <p>Dear [bb], this is letter 5. Mahal na mahal kita at ikaw lang ang mamahalin ko happy happy birthday sayp deserve mo lahat ng effort ko iloveyouu at super proud ako sayo            I will always be here for you!</p>
+        <button class="close-btn" onclick="closeLetter('letter5')">X</button>
+    </div>
+</body>
+</html>
